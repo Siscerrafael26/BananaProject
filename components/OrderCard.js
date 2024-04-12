@@ -21,8 +21,8 @@ export default OrderCard = ({
         ainaYaNdizi={ainaYaNdizi}
       />
       <View style={styles.buttonWrapper}>
-        <CardButton title={"Accept"} />
-        <CardButton title={"Reject"} />
+        <CardButton title={"Pokea"} />
+        <CardButton title={"Katalia"} />
       </View>
     </View>
   );
