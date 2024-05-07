@@ -13,6 +13,7 @@ import DataCard from "../components/DataCard";
 import OrderCard from "../components/OrderCard";
 import ProductCard from "../components/ProductCard";
 import Spacer from "../components/Spacer";
+import StatisticsCard from "../components/StatisticsCard";
 
 export default FarmerPage = () => {
 
@@ -40,13 +41,17 @@ export default FarmerPage = () => {
         </View>
       </View>
       <Spacer size={25} spacerType={"columnSpacer"}/>
+      <ScrollView>
       <View style={styles.farmerPageContents}>
         <ScrollView style={{height: 120}} horizontal={true}>
             <Cards />
         </ScrollView>
       <Spacer size={25} spacerType={"columnSpacer"}/>
       <OrderCard image={require("../assets/Banana1.jpg")} ainaYaNdizi={"Malindi"} beiKichane={"3500"} beiMkungu={"14000"}/>
+      <Spacer size={25} spacerType={"columnSpacer"}/>
+      <StatisticsCard />
       </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };

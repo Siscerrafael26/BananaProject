@@ -20,11 +20,18 @@ const styles = StyleSheet.create({
     width: 230,
     backgroundColor: "white",
     borderRadius: 5,
-    elevation: 20,
+    elevation: 5,
     flexDirection: "row",
     alignItems: "center",
     padding: 10,
-    marginLeft: 15
+    marginLeft: 15,
+    shadowColor: "#000",
+shadowOffset: {
+	width: 0,
+	height: 2,
+},
+shadowOpacity: 0.25,
+shadowRadius: 3.84,
   },
   numberText: {
     fontWeight: "bold",

@@ -6,7 +6,7 @@ import { BlurView } from 'expo-blur';
 import { CustomUserInput } from '../components/CustomUserInput';
 import appColors from '../appColors';
 
-const LoginScreen = ()=> {
+const LoginScreen = ( { navigation } )=> {
     return(
   <ImageBackground style={{flex:1}} source={require("../assets/Bgimg.png")}>
     <BlurView intensity={50} experimentalBlurMethod='dimezisBlurView' style={{flex: 1 ,justifyContent: "center", alignItems : "center", backgroundColor: "transparent", opacity:1}}>
@@ -26,7 +26,7 @@ const LoginScreen = ()=> {
 
     <View style={{height:40}}></View>
 
-    <TouchableOpacity style={{backgroundColor: "transparent", height: 40, width: 150, borderRadius: 20, alignItems: "center", justifyContent: "center"}}>
+    <TouchableOpacity style={{backgroundColor: "transparent", height: 40, width: 150, borderRadius: 20, alignItems: "center", justifyContent: "center"}} onPress={() => {navigation.navigate("SignUpScreen")}}>
       <Text style={{color: 'black',borderBottomWidth: 1}}>SIGN UP</Text>
     </TouchableOpacity>
       </BlurView>

@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, ImageBackground, Image, TouchableOpacity, StyleSheet, SafeAreaView } from "react-native";
 
-const Index = () => {
+const Index = ({ navigation }) => {
     return (
             <SafeAreaView style={{flex:1,backgroundColor: "#70c945", justifyContent: "center", alignItems: "center"}}>
                 <View style={{height: 500, justifyContent: "space-around", alignItems: "center"}}>
@@ -9,10 +9,10 @@ const Index = () => {
                     <Image source={require("../assets/plant.png")} resizeMode="contain" style={{width: 90, height: 90}}></Image>
                 </View>
                 <View>
-                    <TouchableOpacity style={[styles.button, {backgroundColor: "black", marginBottom: 20}]} activeOpacity={0.7}>
+                    <TouchableOpacity style={[styles.button, {backgroundColor: "black", marginBottom: 20}]} activeOpacity={0.7} onPress={() => {navigation.navigate('SignUpScreen')}}>
                         <Text style={{color: "white"}}>REGISTER</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={[styles.button, {backgroundColor: "white"}]} activeOpacity={0.7}>
+                    <TouchableOpacity style={[styles.button, {backgroundColor: "white"}]} activeOpacity={0.7} onPress={() => {navigation.navigate("LoginScreen")}}>
                         <Text >LOGIN</Text>
                     </TouchableOpacity>
                 </View>
