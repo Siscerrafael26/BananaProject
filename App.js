@@ -1,33 +1,28 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, Platform, View } from "react-native";
+import { SafeAreaView, StyleSheet, Platform, View, Switch } from "react-native";
 import Constants from "expo-constants";
-import FarmerPage from "./Screens/FarmerPage";
-import FarmerForm from "./Screens/FarmerForm";
 import Index from "./Screens/Index";
 import LoginScreen from "./Screens/LoginScreen";
-import ProductPage from "./Screens/ProductPage";
-import CartScreen from "./Screens/CartScreen";
 import SignUpScreen from "./Screens/SignUpScreen";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import FarmerPage from "./Screens/FarmerPage";
+import { NativeRouter, Route, Routes } from "react-router-native";
 
 //import LocationScreen from "./Screens/LocationScreen";
 
 
 const App = () => {
 
-  const Stack = createNativeStackNavigator();
+  //const Stack = createNativeStackNavigator();
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator >
-        <Stack.Screen name="Index" component={Index} />
-        <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
-        <Stack.Screen name="CartScreen" component={CartScreen} />
-        <Stack.Screen name="LoginScreen" component={LoginScreen} />
-        <Stack.Screen name="ProductScreen" component={ProductPage} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <NativeRouter>
+      <Routes>
+        <Route exact path="/" Component={Index}/>
+        <Route exact path="/signup" Component={SignUpScreen}/>
+        <Route exact path="/login" Component={LoginScreen} />
+        <Route exact path="/farmerpage" Component={FarmerPage} />
+      </Routes>
+    </NativeRouter>
   );
 };
 

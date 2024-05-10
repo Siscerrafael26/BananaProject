@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, ImageBackground, Image, TouchableOpacity, StyleSheet, SafeAreaView } from "react-native";
+import { Link } from "react-router-native";
 
 const Index = ({ navigation }) => {
     return (
@@ -9,12 +10,12 @@ const Index = ({ navigation }) => {
                     <Image source={require("../assets/plant.png")} resizeMode="contain" style={{width: 90, height: 90}}></Image>
                 </View>
                 <View>
-                    <TouchableOpacity style={[styles.button, {backgroundColor: "black", marginBottom: 20}]} activeOpacity={0.7} onPress={() => {navigation.navigate('SignUpScreen')}}>
+                    <Link to={"/signup"} style={[styles.button, {backgroundColor: "black", marginBottom: 20}]}>
                         <Text style={{color: "white"}}>REGISTER</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={[styles.button, {backgroundColor: "white"}]} activeOpacity={0.7} onPress={() => {navigation.navigate("LoginScreen")}}>
+                    </Link>
+                    <Link to={"/login"} style={[styles.button, {backgroundColor: "white"}]}>
                         <Text >LOGIN</Text>
-                    </TouchableOpacity>
+                    </Link>
                 </View>
                 </View>
             </SafeAreaView>

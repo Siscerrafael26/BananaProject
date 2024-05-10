@@ -15,7 +15,7 @@ import ProductCard from "../components/ProductCard";
 import Spacer from "../components/Spacer";
 import StatisticsCard from "../components/StatisticsCard";
 
-export default FarmerPage = () => {
+const FarmerPage = () => {
 
     const Cards = () => {
         const cards_ = []
@@ -91,3 +91,5 @@ const styles = StyleSheet.create({
     paddingLeft: 20
   }
 });
+
+export default FarmerPage;

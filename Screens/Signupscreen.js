@@ -6,8 +6,10 @@ import { CustomUserInput } from '../components/CustomUserInput';
 import { BlurView } from 'expo-blur';
 import { Fontisto } from '@expo/vector-icons';
 import appColors from '../appColors';
+import { Link } from 'react-router-native';
 
 const SignUpScreen = ( { navigation } )=> {
+
     return(
   <ImageBackground style={{flex:1}} source={require("../assets/Bgimg.png")}>
     <BlurView intensity={50} experimentalBlurMethod='dimezisBlurView' style={{flex: 1 ,justifyContent: "center", alignItems : "center", backgroundColor: "transparent", opacity:1}}>
@@ -36,9 +38,9 @@ const SignUpScreen = ( { navigation } )=> {
 
     <View style={{height:40}}></View>
 
-    <TouchableOpacity style={{backgroundColor: "transparent", height: 40, width: 250, borderRadius: 20, alignItems: "center", justifyContent: "center"}} activeOpacity={0.5} onPress={() => {navigation.navigate("LoginScreen")}}>
+    <Link to={"/login"} style={{backgroundColor: "transparent", height: 40, width: 250, borderRadius: 20, alignItems: "center", justifyContent: "center"}} >
       <Text style={{color: 'black', fontWeight: "bold", borderBottomWidth: 1}}>Already have an account? Login</Text>
-    </TouchableOpacity>
+    </Link>
     </BlurView>
 
   </ImageBackground>
