@@ -7,8 +7,36 @@ import { BlurView } from 'expo-blur';
 import { Fontisto } from '@expo/vector-icons';
 import appColors from '../appColors';
 import { Link } from 'react-router-native';
+import { Ionicons } from '@expo/vector-icons';
+import React,{ useState } from 'react';
 
 const SignUpScreen = ( { navigation } )=> {
+
+    const [ isBuyer, setIsBuyer ] = useState(false)
+    const [ isFarmer, setIsFarmer ] = useState(false)
+    const [ route, setRoute ] = useState("")
+
+    function selectedBuyer () {
+      if (isBuyer) {
+        setIsBuyer(false)
+      }
+      else {
+        setIsFarmer(false)
+        setIsBuyer(true)
+        setRoute("/products")
+      }
+    }
+
+    function selectedFarmer () {
+      if (isFarmer) {
+        setIsFarmer(false)
+      }
+      else {
+        setIsBuyer(false)
+        setIsFarmer(true)
+        setRoute("/farmerpage")
+      }
+    }
 
     return(
   <ImageBackground style={{flex:1}} source={require("../assets/Bgimg.png")}>
@@ -30,11 +58,22 @@ const SignUpScreen = ( { navigation } )=> {
       <View style={{height:10}}></View>
     </View>
 
-    <View style={{height:20}}></View>
+    <View style={{height:30, width: "100%", flexDirection: "row", justifyContent: "center"}}>
+      <TouchableOpacity activeOpacity={1} style={{flexDirection: "row", alignItems: "center"}} onPress={() => {selectedFarmer()}}>
+            <View style={{width: 30, height: 30, borderRadius: 15, justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: isFarmer ? "#70c945" : "black"}}>{isFarmer && (<Ionicons name="checkmark-outline" size={24} color={isFarmer ? "#70c945" : "black"} />)}</View>
+            <Text style={{marginLeft: 5}}>Farmer</Text>
+      </TouchableOpacity>
+      <TouchableOpacity activeOpacity={1} style={{flexDirection: "row", alignItems: "center", marginLeft: 50}}  onPress={() => {selectedBuyer()}}>
+            <View style={{width: 30, height: 30, borderRadius: 15, justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: isBuyer ? "#70c945" : "black"}}>{isBuyer && (<Ionicons name="checkmark-outline" size={24} color={isBuyer ? "#70c945" : "black"} />)}</View>
+            <Text style={{marginLeft: 5}}>Buyer</Text>
+      </TouchableOpacity>
+    </View>
 
-    <TouchableOpacity activeOpacity={0.8} style={{backgroundColor: appColors.appColor, height: 40, width: 150, borderRadius: 20, alignItems: "center", justifyContent: "center"}}>
+    <View style={{height:40}}></View>
+
+    <Link to={route} style={{backgroundColor: appColors.appColor, height: 40, width: 150, borderRadius: 20, alignItems: "center", justifyContent: "center"}}>
       <Text style={{color: 'white'}}>SIGN UP</Text>
-    </TouchableOpacity>
+    </Link>
 
     <View style={{height:40}}></View>
 

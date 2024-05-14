@@ -5,7 +5,11 @@ import Index from "./Screens/Index";
 import LoginScreen from "./Screens/LoginScreen";
 import SignUpScreen from "./Screens/SignUpScreen";
 import FarmerPage from "./Screens/FarmerPage";
+import CartScreen from "./Screens/CartScreen";
+import OrderPage from "./Screens/ProductPage";
 import { NativeRouter, Route, Routes } from "react-router-native";
+import ProductPage from "./Screens/ProductPage";
+import FarmerForm from "./Screens/FarmerForm";
 
 //import LocationScreen from "./Screens/LocationScreen";
 
@@ -21,6 +25,7 @@ const App = () => {
         <Route exact path="/signup" Component={SignUpScreen}/>
         <Route exact path="/login" Component={LoginScreen} />
         <Route exact path="/farmerpage" Component={FarmerPage} />
+        <Route exact path="/products" Component={ProductPage} /> 
       </Routes>
     </NativeRouter>
   );
