@@ -10,12 +10,12 @@ const Index = ({ navigation }) => {
                     <Image source={require("../assets/plant.png")} resizeMode="contain" style={{width: 90, height: 90}}></Image>
                 </View>
                 <View>
-                    <Link to={"/signup"} style={[styles.button, {backgroundColor: "black", marginBottom: 20}]}>
+                    <TouchableOpacity style={[styles.button, {backgroundColor: "black", marginBottom: 20}]} onPress={() => {navigation.navigate("Register")}}>
                         <Text style={{color: "white"}}>REGISTER</Text>
-                    </Link>
-                    <Link to={"/login"} style={[styles.button, {backgroundColor: "white"}]}>
+                    </TouchableOpacity>
+                    <TouchableOpacity  style={[styles.button, {backgroundColor: "white"}]} onPress={() => {navigation.navigate("Login")}}>
                         <Text >LOGIN</Text>
-                    </Link>
+                    </TouchableOpacity>
                 </View>
                 </View>
             </SafeAreaView>

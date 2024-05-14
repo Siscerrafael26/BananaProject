@@ -6,7 +6,6 @@ import { CustomUserInput } from '../components/CustomUserInput';
 import { BlurView } from 'expo-blur';
 import { Fontisto } from '@expo/vector-icons';
 import appColors from '../appColors';
-import { Link } from 'react-router-native';
 import { Ionicons } from '@expo/vector-icons';
 import React,{ useState } from 'react';
 
@@ -71,15 +70,15 @@ const SignUpScreen = ( { navigation } )=> {
 
     <View style={{height:40}}></View>
 
-    <Link to={route} style={{backgroundColor: appColors.appColor, height: 40, width: 150, borderRadius: 20, alignItems: "center", justifyContent: "center"}}>
+    <TouchableOpacity style={{backgroundColor: appColors.appColor, height: 40, width: 150, borderRadius: 20, alignItems: "center", justifyContent: "center"}}>
       <Text style={{color: 'white'}}>SIGN UP</Text>
-    </Link>
+    </TouchableOpacity>
 
     <View style={{height:40}}></View>
 
-    <Link to={"/login"} style={{backgroundColor: "transparent", height: 40, width: 250, borderRadius: 20, alignItems: "center", justifyContent: "center"}} >
+    <TouchableOpacity style={{backgroundColor: "transparent", height: 40, width: 250, borderRadius: 20, alignItems: "center", justifyContent: "center"}} >
       <Text style={{color: 'black', fontWeight: "bold", borderBottomWidth: 1}}>Already have an account? Login</Text>
-    </Link>
+    </TouchableOpacity>
     </BlurView>
 
   </ImageBackground>

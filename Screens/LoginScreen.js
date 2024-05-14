@@ -5,7 +5,6 @@ import { BlurView } from 'expo-blur';
 
 import { CustomUserInput } from '../components/CustomUserInput';
 import appColors from '../appColors';
-import { Link } from 'react-router-native';
 
 const LoginScreen = ( { navigation } )=> {
     return(
@@ -21,15 +20,15 @@ const LoginScreen = ( { navigation } )=> {
 
     <View style={{height:20}}></View>
 
-    <Link to={"/farmerpage"} style={{backgroundColor: appColors.appColor, height: 40, width: 150, borderRadius: 20, alignItems: "center", justifyContent: "center"}}>
+    <TouchableOpacity style={{backgroundColor: appColors.appColor, height: 40, width: 150, borderRadius: 20, alignItems: "center", justifyContent: "center"}}>
       <Text style={{color: 'white'}}>LOGIN</Text>
-    </Link>
+    </TouchableOpacity>
 
     <View style={{height:40}}></View>
 
-    <Link to={"/signup"} style={{backgroundColor: "transparent", height: 40, width: 150, borderRadius: 20, alignItems: "center", justifyContent: "center"}}>
+    <TouchableOpacity style={{backgroundColor: "transparent", height: 40, width: 150, borderRadius: 20, alignItems: "center", justifyContent: "center"}}>
       <Text style={{color: 'black',borderBottomWidth: 1}}>SIGN UP</Text>
-    </Link>
+    </TouchableOpacity>
       </BlurView>
   </ImageBackground>
     );
