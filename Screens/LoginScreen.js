@@ -5,6 +5,7 @@ import { BlurView } from 'expo-blur';
 
 import { CustomUserInput } from '../components/CustomUserInput';
 import appColors from '../appColors';
+import ScreenNames from './ScreenNames';
 
 const LoginScreen = ( { navigation } )=> {
     return(
@@ -26,7 +27,7 @@ const LoginScreen = ( { navigation } )=> {
 
     <View style={{height:40}}></View>
 
-    <TouchableOpacity style={{backgroundColor: "transparent", height: 40, width: 150, borderRadius: 20, alignItems: "center", justifyContent: "center"}}>
+    <TouchableOpacity style={{backgroundColor: "transparent", height: 40, width: 150, borderRadius: 20, alignItems: "center", justifyContent: "center"}} onPress={() => {navigation.navigate(ScreenNames.SIGNUP_SCREEN)}}>  
       <Text style={{color: 'black',borderBottomWidth: 1}}>SIGN UP</Text>
     </TouchableOpacity>
       </BlurView>

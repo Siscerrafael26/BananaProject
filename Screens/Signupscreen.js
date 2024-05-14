@@ -2,6 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View ,Button,Box ,Image, ImageBackground, SafeAreaView, TouchableOpacity} from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
+import ScreenNames from './ScreenNames';
+
 import { CustomUserInput } from '../components/CustomUserInput';
 import { BlurView } from 'expo-blur';
 import { Fontisto } from '@expo/vector-icons';
@@ -14,6 +16,7 @@ const SignUpScreen = ( { navigation } )=> {
     const [ isBuyer, setIsBuyer ] = useState(false)
     const [ isFarmer, setIsFarmer ] = useState(false)
     const [ route, setRoute ] = useState("")
+    const [ error, setError ] = useState(false)
 
     function selectedBuyer () {
       if (isBuyer) {
@@ -23,6 +26,7 @@ const SignUpScreen = ( { navigation } )=> {
         setIsFarmer(false)
         setIsBuyer(true)
         setRoute("/products")
+        setError(false)
       }
     }
 
@@ -34,6 +38,19 @@ const SignUpScreen = ( { navigation } )=> {
         setIsBuyer(false)
         setIsFarmer(true)
         setRoute("/farmerpage")
+        setError(false)
+      }
+    }
+
+    const handleSignUp = () => {
+      if ( isBuyer ) {
+        navigation.navigate(ScreenNames.PRODUCT_SCREEN)
+      }
+      else if ( isFarmer ) {
+        navigation.navigate(ScreenNames.FARMER_SCREEN)
+      }
+      else{
+        setError(true)
       }
     }
 
@@ -68,9 +85,9 @@ const SignUpScreen = ( { navigation } )=> {
       </TouchableOpacity>
     </View>
 
-    <View style={{height:40}}></View>
+    <View style={{height:40}}>{error && (<Text style={{color: "red", paddingTop: 5}}>Please select either buyer or farmer.</Text>)}</View>
 
-    <TouchableOpacity style={{backgroundColor: appColors.appColor, height: 40, width: 150, borderRadius: 20, alignItems: "center", justifyContent: "center"}}>
+    <TouchableOpacity style={{backgroundColor: appColors.appColor, height: 40, width: 150, borderRadius: 20, alignItems: "center", justifyContent: "center"}}  onPress={() => {handleSignUp()}}>
       <Text style={{color: 'white'}}>SIGN UP</Text>
     </TouchableOpacity>
 

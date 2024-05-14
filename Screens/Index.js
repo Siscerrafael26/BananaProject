@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, ImageBackground, Image, TouchableOpacity, StyleSheet, SafeAreaView } from "react-native";
 import { Link } from "react-router-native";
+import ScreenNames from "./ScreenNames";
 
 const Index = ({ navigation }) => {
     return (
@@ -10,10 +11,10 @@ const Index = ({ navigation }) => {
                     <Image source={require("../assets/plant.png")} resizeMode="contain" style={{width: 90, height: 90}}></Image>
                 </View>
                 <View>
-                    <TouchableOpacity style={[styles.button, {backgroundColor: "black", marginBottom: 20}]} onPress={() => {navigation.navigate("Register")}}>
+                    <TouchableOpacity style={[styles.button, {backgroundColor: "black", marginBottom: 20}]} onPress={() => {navigation.navigate(ScreenNames.SIGNUP_SCREEN)}}>
                         <Text style={{color: "white"}}>REGISTER</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity  style={[styles.button, {backgroundColor: "white"}]} onPress={() => {navigation.navigate("Login")}}>
+                    <TouchableOpacity  style={[styles.button, {backgroundColor: "white"}]} onPress={() => {navigation.navigate(ScreenNames.LOGIN_SCREEN)}}>
                         <Text >LOGIN</Text>
                     </TouchableOpacity>
                 </View>
