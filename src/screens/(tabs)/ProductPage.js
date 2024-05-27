@@ -1,76 +1,76 @@
 import React, { useState } from "react";
 import { View, Text, SafeAreaView, ScrollView } from "react-native";
-import CustomSearchInput from "../components/CustomSearchInput";
-import ProductCard from "../components/ProductCard";
-import appColors from "../appColors";
+import CustomSearchInput from "@components/CustomSearchInput";
+import ProductCard from "@components/ProductCard";
+import appColors from "/appColors";
 
 const products = [
     {
         "id": 1,
-        "image": require('../assets/Banana1.jpg'),
+        "image": require('@assets/Banana1.jpg'),
         "beiYaKichane": 6000,
         "beiYaMkungu": 15000,
         "ainaYaNdizi": "Mshare"
     },
     {
         "id": 2,
-        "image": require('../assets/Banana2.jpg'),
+        "image": require('@assets/Banana2.jpg'),
         "beiYaKichane": 5000,
         "beiYaMkungu": 10000,
         "ainaYaNdizi": "Malindi"
     },
     {
         "id" : 3,
-        "image": require('../assets/banana3.jpg'),
+        "image": require('@assets/banana3.jpg'),
         "beiYaKichane": 2500,
         "beiYaMkungu": 9000,
         "ainaYaNdizi": "Kisukari"
     },
     {
         "id" : 4,
-        "image": require('../assets/banana4.jpg'),
+        "image": require('@assets/banana4.jpg'),
         "beiYaKichane": 5000,
         "beiYaMkungu": 11000,
         "ainaYaNdizi": "Mshare"
     },
     {
         "id" : 5,
-        "image": require('../assets/banana5.jpg'),
+        "image": require('@assets/banana5.jpg'),
         "beiYaKichane": 7000,
         "beiYaMkungu": 12000,
         "ainaYaNdizi": "Malindi"
     },
     {
         "id" : 6,
-        "image": require('../assets/banana6.jpg'),
+        "image": require('@assets/banana6.jpg'),
         "beiYaKichane": 5500,
         "beiYaMkungu": 13000,
         "ainaYaNdizi": "Malindi"
     },
     {
         "id" : 7,
-        "image": require('../assets/banana7.jpg'),
+        "image": require('@assets/banana7.jpg'),
         "beiYaKichane": 5000,
         "beiYaMkungu": 10000,
         "ainaYaNdizi": "Kisukari"
     },
     {
         "id" : 8,
-        "image": require('../assets/banana8.jpg'),
+        "image": require('@assets/banana8.jpg'),
         "beiYaKichane": 4000,
         "beiYaMkungu": 11500,
         "ainaYaNdizi": "Uganda"
     },
     {
         "id" : 9,
-        "image": require('../assets/banana9.jpg'),
+        "image": require('@assets/banana9.jpg'),
         "beiYaKichane": 4500,
         "beiYaMkungu": 9000,
         "ainaYaNdizi": "Bukoba"
     },
     {
         "id" : 10,
-        "image": require('../assets/banana10.jpg'),
+        "image": require('@assets/banana10.jpg'),
         "beiYaKichane": 3500,
         "beiYaMkungu": 8000,
         "ainaYaNdizi": "Malindi"

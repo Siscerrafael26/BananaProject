@@ -1,15 +1,15 @@
+import React,{ useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View ,Button,Box ,Image, ImageBackground, SafeAreaView, TouchableOpacity} from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
-import ScreenNames from './ScreenNames';
+import ScreenNames from '@screens/ScreenNames';
 
 import { CustomUserInput } from '../components/CustomUserInput';
 import { BlurView } from 'expo-blur';
 import { Fontisto } from '@expo/vector-icons';
-import appColors from '../appColors';
+import appColors from '@colors/appColors';
 import { Ionicons } from '@expo/vector-icons';
-import React,{ useState } from 'react';
 
 const SignUpScreen = ( { navigation } )=> {
 
@@ -94,8 +94,8 @@ const SignUpScreen = ( { navigation } )=> {
     <View style={{height:40}}></View>
 
     <TouchableOpacity style={{backgroundColor: "transparent", height: 40, width: 250, borderRadius: 20, alignItems: "center", justifyContent: "center"}} >
-      <Text style={{color: 'black', fontWeight: "bold", borderBottomWidth: 1}}>Already have an account? Login</Text>
-    </TouchableOpacity>
+      <Text style={{color: 'black', fontWeight: "bold", borderBottomWidth: 1}}></Text>
+    </TouchableOpacity> 
     </BlurView>
 
   </ImageBackground>

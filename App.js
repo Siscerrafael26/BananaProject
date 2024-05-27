@@ -1,20 +1,20 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, Platform } from "react-native";
 import Constants from "expo-constants";
-import Index from "./Screens/Index";
+import Index from "./src/Index";
 //import { NativeRouter, Route, Routes } from "react-router-native";
-import ProductPage from "./Screens/ProductPage";
-import FarmerForm from "./Screens/FarmerForm";
-import SignUpScreen from "./Screens/SignUpScreen";
-import LoginScreen from "./Screens/LoginScreen";
-import FarmerPage from "./Screens/FarmerPage";
-import LocationScreen from "./Screens/LocationScreen";
+import ProductPage from "@screens/(tabs)/ProductPage";
+import FarmerForm from "@screens/FarmerForm";
+import SignUpScreen from "@screens/SignUpScreen";
+import LoginScreen from "@screens/LoginScreen";
+import FarmerPage from "@screens/(tabs)/FarmerPage";
+import LocationScreen from "@screens/(tabs)/LocationScreen";
 
-import ScreenNames from "./Screens/ScreenNames";
+import ScreenNames from "@screens/ScreenNames";
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-//import LocationScreen from "./Screens/LocationScreen";
+//import LocationScreen from "@screens/LocationScreen";
 
 
 const App = () => {
@@ -39,7 +39,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: Platform.OS === "android" ? Constants.statusBarHeight : 0,
+    marginTop: Constants.statusBarHeight,
     backgroundColor: "#f3fff3"
   },
 });

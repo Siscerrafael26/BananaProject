@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, ImageBackground, Image, TouchableOpacity, StyleSheet, SafeAreaView } from "react-native";
 import { Link } from "react-router-native";
-import ScreenNames from "./ScreenNames";
+import ScreenNames from "./screens/ScreenNames";
 
 const Index = ({ navigation }) => {
     return (

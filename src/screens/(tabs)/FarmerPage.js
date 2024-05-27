@@ -4,16 +4,15 @@ import {
   SafeAreaView,
   Text,
   StyleSheet,
-  Platform,
   View,
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-import DataCard from "../components/DataCard";
-import OrderCard from "../components/OrderCard";
-import ProductCard from "../components/ProductCard";
-import Spacer from "../components/Spacer";
-import StatisticsCard from "../components/StatisticsCard";
+import DataCard from "../../components/DataCard";
+import OrderCard from "../../components/OrderCard";
+import ProductCard from "../../components/ProductCard";
+import Spacer from "../../components/Spacer";
+import StatisticsCard from "../../components/StatisticsCard";
 
 const FarmerPage = () => {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Image, Text, ScrollView } from 'react-native';
-import CartObject from '../components/CartObject';
+import CartObject from '../../components/CartObject';
 import { BlurView } from 'expo-blur';
 
 const CartScreen = () => {
