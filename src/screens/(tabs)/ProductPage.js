@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Text, SafeAreaView, ScrollView } from "react-native";
 import CustomSearchInput from "@components/CustomSearchInput";
 import ProductCard from "@components/ProductCard";
-import appColors from "/appColors";
+import appColors from "@colors/appColors";
 
 const products = [
     {

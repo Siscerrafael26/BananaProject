@@ -8,11 +8,11 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-import DataCard from "../../components/DataCard";
-import OrderCard from "../../components/OrderCard";
-import ProductCard from "../../components/ProductCard";
-import Spacer from "../../components/Spacer";
-import StatisticsCard from "../../components/StatisticsCard";
+import DataCard from "@components/DataCard";
+import OrderCard from "@components/OrderCard";
+import ProductCard from "@components/ProductCard";
+import Spacer from "@components/Spacer";
+import StatisticsCard from "@components/StatisticsCard";
 
 const FarmerPage = () => {
 
@@ -46,7 +46,7 @@ const FarmerPage = () => {
             <Cards />
         </ScrollView>
       <Spacer size={25} spacerType={"columnSpacer"}/>
-      <OrderCard image={require("../assets/Banana1.jpg")} ainaYaNdizi={"Malindi"} beiKichane={"3500"} beiMkungu={"14000"}/>
+      <OrderCard image={require("@assets/Banana1.jpg")} ainaYaNdizi={"Malindi"} beiKichane={"3500"} beiMkungu={"14000"}/>
       <Spacer size={25} spacerType={"columnSpacer"}/>
       <StatisticsCard />
       </View>

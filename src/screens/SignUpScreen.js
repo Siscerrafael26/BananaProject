@@ -55,7 +55,7 @@ const SignUpScreen = ( { navigation } )=> {
     }
 
     return(
-  <ImageBackground style={{flex:1}} source={require("../assets/Bgimg.png")}>
+  <ImageBackground style={{flex:1}} source={require("@assets/Bgimg.png")}>
     <BlurView intensity={50} experimentalBlurMethod='dimezisBlurView' style={{flex: 1 ,justifyContent: "center", alignItems : "center", backgroundColor: "transparent", opacity:1}}>
     <View>
       <Text style={{fontSize: 25, paddingLeft: 10, textAlign: "center", fontWeight: "bold"}}>SIGN UP</Text>

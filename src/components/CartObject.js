@@ -33,7 +33,7 @@ const CartObject = ({ ainaYaKipimo }) => {
     return (
         <View style={styles.cartObject}>
             <Image 
-            source={require('../assets/Banana1.jpg')}
+            source={require('@assets/Banana1.jpg')}
             style={styles.image}
             resizeMode='center'
             />

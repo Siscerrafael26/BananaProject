@@ -5,16 +5,23 @@ export default function TabLayout() {
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
       <Tabs.Screen
-        name="index"
+        name="FarmerScreen"
         options={{
-          title: 'Home',
+          title: 'Farmer',
           tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="settings"
+        name="CartScreen"
         options={{
-          title: 'Settings',
+          title: 'Cart Screen',
+          tabBarIcon: ({ color }) => <FontAwesome size={28} name="cog" color={color} />,
+        }}
+      />
+       <Tabs.Screen
+        name="LocationScreen"
+        options={{
+          title: 'Cart Screen',
           tabBarIcon: ({ color }) => <FontAwesome size={28} name="cog" color={color} />,
         }}
       />

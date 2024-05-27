@@ -4,13 +4,13 @@ import { StyleSheet, Text, View ,Button,Box ,Image, ImageBackground, SafeAreaVie
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { BlurView } from 'expo-blur';
 
-import { CustomUserInput } from '../components/CustomUserInput';
-import appColors from '../appColors';
-import ScreenNames from './ScreenNames';
+import { CustomUserInput } from '@components/CustomUserInput';
+import appColors from '@colors/appColors';
+import ScreenNames from '@screens/ScreenNames';
 
 const LoginScreen = ( { navigation } )=> {
     return(
-  <ImageBackground style={{flex:1}} source={require("../assets/Bgimg.png")}>
+  <ImageBackground style={{flex:1}} source={require("@assets/Bgimg.png")}>
     <BlurView intensity={50} experimentalBlurMethod='dimezisBlurView' style={{flex: 1 ,justifyContent: "center", alignItems : "center", backgroundColor: "transparent", opacity:1}}>
     <View>
       <Text style={{fontSize: 25, textAlign: "center"}}>LOGIN</Text>
@@ -22,7 +22,9 @@ const LoginScreen = ( { navigation } )=> {
 
     <View style={{height:20}}></View>
 
-    <TouchableOpacity style={{backgroundColor: appColors.appColor, height: 40, width: 150, borderRadius: 20, alignItems: "center", justifyContent: "center"}}>
+    <TouchableOpacity 
+    onPress={() => {navigation.navigate(ScreenNames.AUTH_SCREEN)}}
+    style={{backgroundColor: appColors.appColor, height: 40, width: 150, borderRadius: 20, alignItems: "center", justifyContent: "center"}}>
       <Text style={{color: 'white'}}>LOGIN</Text>
     </TouchableOpacity>
 
